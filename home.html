@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+
+        <style>
+            body{
+                font-family: "Outfit";
+                background:url(img/background.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+
+               
+            }
+            .Contact-container{
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+             
+            .Contact-left{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 20px;
+                
+            }
+            .Contact-left-title h2{
+                font-weight: 600;
+                font-size: 40px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: blue;
+                margin-bottom: 5px;
+            }
+             .Contact-left-title hr{
+                border: none;
+                background-color: blue;
+                width: 120px;
+                height: 5px;
+                border-radius: 10px;
+            }
+
+            .Contact-input{
+                width: 400px;
+                height: 30px;
+                padding: 20px;
+                border: none;
+                outline: none;
+                color: #666;
+                font-weight: 500;
+                border-radius: 50px;
+            }
+            .Contact-left textarea{
+                height: 140px;
+                padding: 15px;
+                border-radius: 10px;
+            }
+            .Contact-input:focus{
+                border:2px solid #e7df0a;
+            }
+             .Contact-left button{
+                display: flex;
+                align-items: center;
+                padding: 15px 30px;
+                gap: 10px;
+                border: none;
+                border-radius: 50px;
+                background: linear-gradient(270deg,#e96ab2,#3bb5e1);
+                cursor: pointer;
+            }
+
+             .Contact-right{
+                width: 500px;
+                 display: flex;
+                flex-direction: column;
+                align-items: end;
+                gap: 20px;
+            }
+            .Contact-right .verse{
+                font-size: 30px;
+                color: green;
+            }
+            @media (max-width:800px) {
+                .Contact-right{
+                    display: none;
+                }
+                .Contact-input{
+                    width: 80vw;
+                }
+            }
+            .Contact-right .verse{
+                font-family: sans-serif;
+                color: white;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="Contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="Contact-left">
+        
+                <div class="Contact-left-title">
+                    <h2>PRAYER REQUEST</h2><hr>
+                </div>
+                <input type="hidden" name="access_key" value="75cc9202-058f-477c-a958-2ed01dbb2e6b">
+                <input type="text" name="Subject" placeholder="Prayer Subject" class="Contact-input" required>
+              
+                <textarea name="Message" placeholder="Details" class="Contact-input" required></textarea>
+                <button type="submit">Submit</button>
+
+               
+            </form>
+             <div class="Contact-right">
+                <div class="verse">
+                    <h2>Philippians 4:6–7 (NIV)</h2>
+                    <p>
+                    “Do not be anxious about anything, but in every situation,
+                     by prayer and petition, with thanksgiving, present your requests to God.
+                    And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.”</p>
+                </div>
+            </div>
+
+        </div>
+        
+    </body>
+</html>
